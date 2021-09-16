@@ -64,6 +64,15 @@ extension SearchResultViewController: UICollectionViewDataSource, UICollectionVi
 }
 
 extension SearchResultViewController: SearchViewProtocol {
+    func emptySuccess() {
+        let ac = UIAlertController(title: "Oops", message: "Requst sent zero pictures, try to make request more accurately.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] action in
+            guard let self = self else { return }
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        present(ac,animated: true)
+    }
+    
     func success() {
         collectionView.reloadData()
     }

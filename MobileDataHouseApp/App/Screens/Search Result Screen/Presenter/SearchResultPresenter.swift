@@ -9,6 +9,7 @@ import Foundation
 
 protocol SearchViewProtocol: AnyObject {
     func success()
+    func emptySuccess()
     func failure(error: Error)
 }
 
@@ -38,8 +39,12 @@ class SearchPresenter: SearchViewPresenterProtocol {
             
             DispatchQueue.main.async {
                 if let result = result {
-                    self.pictures = result
-                    self.view?.success()
+                    if !result.results.isEmpty {
+                        self.pictures = result
+                        self.view?.success()
+                    } else {
+                        self.view?.emptySuccess()
+                    }
                 } else {
                     guard let error = error else { return }
                     self.view?.failure(error: error)
