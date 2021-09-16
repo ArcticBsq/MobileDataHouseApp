@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MobileDataHouseApp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTextField" destination="jSV-Zd-Seb" id="j7y-Kp-r9o"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ZRV-Cj-IQx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type picture to search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSV-Zd-Seb">
+                    <rect key="frame" x="40" y="249" width="334" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHD-rO-2y6">
+                    <rect key="frame" x="176" y="336" width="62" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Search"/>
+                    <connections>
+                        <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="Tpb-VB-hOu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jSV-Zd-Seb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="92A-c2-J9h"/>
+                <constraint firstItem="KHD-rO-2y6" firstAttribute="top" secondItem="jSV-Zd-Seb" secondAttribute="bottom" constant="53" id="LEe-Of-i5B"/>
+                <constraint firstItem="jSV-Zd-Seb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="ORe-hD-n9k"/>
+                <constraint firstItem="KHD-rO-2y6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QxV-ZD-D38"/>
+                <constraint firstItem="jSV-Zd-Seb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="205" id="Xcq-3t-jbe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jSV-Zd-Seb" secondAttribute="trailing" constant="40" id="bB0-x8-qR2"/>
+            </constraints>
+            <point key="canvasLocation" x="-13.043478260869566" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
