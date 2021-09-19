@@ -14,7 +14,7 @@ protocol NetworkDataFetcherProtocol {
     func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T?
 }
 
-class NetworkDataFetcher: NetworkDataFetcherProtocol {
+final class NetworkDataFetcher: NetworkDataFetcherProtocol {
     
     var networkService = NetworkService()
     

@@ -9,9 +9,11 @@ import UIKit
 
 protocol Builder {
     static func createMainModule() -> UIViewController
+    static func createFilterModule(searchTerm: String?) -> UIViewController
+    static func createPictureDetailModule(url: URL) -> UIViewController
 }
 
-class ModelBuilder: Builder {
+final class ModelBuilder: Builder {
     static func createMainModule() -> UIViewController {
         let view = MainViewController()
         let presenter = MainPresenter(view: view)

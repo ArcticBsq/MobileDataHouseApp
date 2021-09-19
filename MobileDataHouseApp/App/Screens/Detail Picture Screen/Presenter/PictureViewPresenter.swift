@@ -17,7 +17,7 @@ protocol PictureViewPresenterPrototol: AnyObject {
     func setupView()
 }
 
-class PictureViewPresenter: PictureViewPresenterPrototol {
+final class PictureViewPresenter: PictureViewPresenterPrototol {
     weak var view: PictureViewProtocol?
     var highResUrl: URL?
     

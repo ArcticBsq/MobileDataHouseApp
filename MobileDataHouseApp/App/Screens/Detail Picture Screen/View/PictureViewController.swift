@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PictureViewController: UIViewController {
+final class PictureViewController: UIViewController {
     @IBOutlet weak var pictureImageView: UIImageView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

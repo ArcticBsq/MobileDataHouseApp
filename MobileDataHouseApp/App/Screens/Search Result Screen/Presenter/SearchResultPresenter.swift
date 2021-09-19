@@ -20,7 +20,7 @@ protocol SearchViewPresenterProtocol: AnyObject {
     var searchTerm: String? { get set }
 }
 
-class SearchPresenter: SearchViewPresenterProtocol {
+final class SearchPresenter: SearchViewPresenterProtocol {
     weak var view: SearchViewProtocol?
     let networkService: NetworkDataFetcherProtocol!
     var pictures: SearchResults? 

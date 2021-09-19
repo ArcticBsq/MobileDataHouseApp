@@ -14,7 +14,7 @@ protocol MainViewPresenterProtocol: AnyObject {
     init(view: MainViewProtocol)
 }
 
-class MainPresenter: MainViewPresenterProtocol {
+final class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
     
     required init(view: MainViewProtocol) {

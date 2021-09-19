@@ -12,7 +12,7 @@ protocol NetworkServiceProtocol {
     func request(searchTerm: String, completion: @escaping (Data?, Error?) -> Void)
 }
 
-class NetworkService: NetworkServiceProtocol {
+final class NetworkService: NetworkServiceProtocol {
     
     internal func createDataTask(from request: URLRequest, completion: @escaping (Data? , Error?) -> Void) -> URLSessionDataTask {
         return URLSession.shared.dataTask(with: request) { (data, response, error) in
